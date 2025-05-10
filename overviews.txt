@@ -1,0 +1,141 @@
+Chapter 1: From Files To Databases
+Understand the challenges of file-based data storage
+
+Implement atomic file updates using the rename technique
+
+Learn about fsync for durability
+
+Understand append-only logs for safe incremental updates
+
+Chapter 2: Indexing Data Structures
+Understand different types of queries (scan, point, range)
+
+Compare different indexing structures (hashtables, sorted arrays, B-trees)
+
+Learn about B+trees and their advantages for disk-based storage
+
+Understand log-structured storage (LSM-trees)
+
+Chapter 3: B-Tree & Crash Recovery
+Understand B-tree as a balanced n-ary tree
+
+View B-trees as nested arrays
+
+Learn how to maintain B+tree invariants (splitting and merging)
+
+Implement copy-on-write for crash recovery
+
+Understand alternatives like double-write buffers
+
+Chapter 4: B+Tree Node and Insertion
+Design B+tree node format
+
+Implement node operations (decode, lookup)
+
+Implement node update operations
+
+Implement node splitting
+
+Implement B+tree insertion algorithm
+
+Chapter 5: B+Tree Deletion and Testing
+Implement high-level B+tree interfaces
+
+Implement node merging
+
+Implement B+tree deletion algorithm
+
+Create testing framework for B+tree
+
+Chapter 6: Append-Only KV Store
+Create a KV store with copy-on-write B+tree
+
+Implement two-phase update for atomicity and durability
+
+Design file layout with meta page
+
+Implement disk page management
+
+Handle errors and recovery
+
+Chapter 7: Free List: Recycle & Reuse
+Understand memory management techniques
+
+Implement linked list on disk for free pages
+
+Implement free list operations (push, pop)
+
+Integrate free list with KV store
+
+Manage page reuse
+
+Chapter 8: Tables on KV
+Encode rows as key-value pairs
+
+Implement database schemas
+
+Support different column types
+
+Implement table operations (get, insert, update, delete)
+
+Create internal tables for metadata
+
+Chapter 9: Range Queries
+Implement B+tree iterator
+
+Create order-preserving encoding for different data types
+
+Implement range query scanner
+
+Chapter 10: Secondary Indexes
+Implement secondary indexes as extra keys
+
+Select appropriate index for queries
+
+Maintain secondary indexes during updates
+
+Chapter 11: Atomic Transactions
+Implement transaction interfaces (begin, commit, rollback)
+
+Achieve atomicity via copy-on-write
+
+Move tree operations to transactions
+
+Implement transactional table operations
+
+Chapter 12: Concurrency Control
+Understand different levels of concurrency
+
+Implement snapshot isolation for readers
+
+Handle conflicts for writers
+
+Implement optimistic concurrency control
+
+Use version numbers in free list
+
+Chapter 13: SQL Parser
+Understand syntax, parser, and interpreter concepts
+
+Define query language specification
+
+Implement recursive descent parser
+
+Parse SQL-like statements (SELECT, INSERT, UPDATE, DELETE)
+
+Parse expressions with operator precedence
+
+Chapter 14: Query Language
+Implement query execution engine
+
+Convert abstract syntax tree to query plan
+
+Implement plan nodes for different operations
+
+Implement expression evaluation
+
+Support aggregations and grouping
+
+This roadmap provides a comprehensive guide to building a database from scratch, starting with basic file operations and progressing to a full SQL-like query language with concurrency support.
+
+https://www.perplexity.ai/search/i-am-uploading-the-full-book-i-CKBdH58zQZGZOTxKonbG.A
