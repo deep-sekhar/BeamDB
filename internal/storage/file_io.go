@@ -24,10 +24,10 @@ func SaveData(path string, data []byte) error {
 		return err
 	}
 
-	// Ensure clean up
+	// delete the temporary file if anything goes wrong
 	defer func() {
-		fp.Close()
 		if err != nil {
+			// delete the temporary file if it exists
 			os.Remove(tmp)
 		}
 	}()
@@ -48,6 +48,12 @@ func SaveData(path string, data []byte) error {
 		return err
 	}
 
-	// rename the temporary file to the actual file
+	// close the file before renaming
+	err = fp.Close()
+	if err != nil {
+		return err
+	}
+
+	// rename the temporary file to the actual file name
 	return os.Rename(tmp, path)
 }
